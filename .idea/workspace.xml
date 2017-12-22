@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="041ed803-c5bd-4bc1-9e77-1a1eb9a6e0af" name="Default" comment="" />
+    <list default="true" id="041ed803-c5bd-4bc1-9e77-1a1eb9a6e0af" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/rough-sketches/index.html" afterPath="$PROJECT_DIR$/rough-sketches/index.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rough-sketches/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="285">
+              <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rough-sketches/css/default.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -33,6 +45,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/rough-sketches/index.html" />
+        <option value="$PROJECT_DIR$/rough-sketches/css/default.css" />
       </list>
     </option>
   </component>
@@ -75,6 +88,12 @@
               <item name="IGetThatReference" type="462c0819:PsiDirectoryNode" />
               <item name="rough-sketches" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IGetThatReference" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IGetThatReference" type="462c0819:PsiDirectoryNode" />
+              <item name="rough-sketches" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -114,12 +133,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513918574514</updated>
-      <workItem from="1513918575762" duration="116000" />
+      <workItem from="1513918575762" duration="1465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116000" />
+    <option name="totallyTimeSpent" value="1465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="780" extended-state="0" />
@@ -157,8 +176,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/rough-sketches/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="285">
+          <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rough-sketches/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="36" />
           <folding />
         </state>
       </provider>
