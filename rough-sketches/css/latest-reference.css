@@ -3,12 +3,12 @@
     border-radius: 5px !important;
 }
 
-#latest {
-    font-size: 24px !important;
+#latest-quote {
+    font-size: 26px !important;
     text-align: center !important;
 }
 
-#latest:hover {
+#latest-quote:hover {
     background-color: #CCCAC5 !important;
     border-radius: 5px;
 }
@@ -22,6 +22,7 @@
 }
 
 .tag {
+    font-size: 16px !important;
     border-radius: 25px !important;
     background-color: #CCCAC5 !important;
     padding-left: 10px;
@@ -31,4 +32,12 @@
 
 .option {
     color: #7F7055 !important;
+}
+
+.option:hover {
+    color: #584a37 !important;
+}
+
+.option:active {
+    color: #403324 !important;
 }
