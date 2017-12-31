@@ -7,11 +7,5 @@ class Reference(models.Model):
     quote = models.TextField()
     author = models.CharField(max_length=100)
     source = models.CharField(max_length=100)
-    pub_date = models.DateTimeField()
     tags = models.TextField()
-
-    def setTags(self, tags):
-        self.tags = json.dumps(tags)
-
-    def getTags(self):
-        return json.loads(self.tags)
+    pub_date = models.DateTimeField()

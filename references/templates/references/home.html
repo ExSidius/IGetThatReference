@@ -43,135 +43,54 @@
 
     <div class="container">
 
-        <!--<div class="row">-->
-            <!--<div id="quoteid" class="col-md-8 offset-md-2 latest">-->
+        {% for reference, tags in info %}
 
-                <!--<div class="quote">-->
+            <div class="row">
 
-                    <!--"In a democracy, the government is the people," Milo explained. "We're the people, aren't we?-->
-                    <!--So we might as well keep the money and eliminate the middleman."-->
+            {% if forloop.counter0 == 0 %}
+                <div id="quote-{{ reference.id }}" class="col-md-8 offset-md-2 latest">
+            {% else %}
+                <div id="quote-{{ reference.id }}"  class="col-md-8 offset-md-2">
+            {% endif %}
 
-                    <!--<br>-->
+                    <div class="quote">
 
-                    <!--<div class="citation">-->
-                        <!-- - -->
-                        <!--<span class="author">Joseph Heller</span>,-->
-                        <!--<span class="source">Catch 22</span>-->
-                    <!--</div>-->
+                        {{ reference.quote }}
 
-                <!--</div>-->
+                        <br>
 
-                <!--<br>-->
-                <!--<hr>-->
+                        <div class="citation">
+                            -
+                            <span class="author">{{ reference.author }}</span>,
+                            <span class="source">{{ reference.source }}</span>
+                        </div>
 
-                <!--<div class="menu">-->
+                    </div>
 
-                    <!--<div class="tags">-->
-                        <!--<span class="tag">#catch-22</span>-->
-                        <!--<span class="tag">#josephheller</span>-->
-                        <!--<span class="tag">#milo</span>-->
-                        <!--<span class="tag">#taxes</span>-->
-                        <!--<span class="tag">#book</span>-->
-                        <!--<span class="tag">#classic</span>-->
-                    <!--</div>-->
+                    <br>
+                    <hr>
 
-                    <!--<div class="options">-->
-                        <!--<a id="quoteid-copy" href="#!" class="option copy"><i class="fa fa-clipboard"></i></a>-->
-                    <!--</div>-->
+                    <div class="menu">
 
-                <!--</div>-->
+                        <div class="tags">
 
-            <!--</div>-->
-        <!--</div>-->
+                            {% for tag in tags %}
+                                <span class="tag">#{{ tag }}</span>
+                            {% endfor %}
+                        </div>
 
-        <!--<br>-->
-        <!--<br>-->
+                        <div class="options">
+                            <a id="copy-{{ reference.id }}" href="#!" class="option copy"><i class="fa fa-clipboard"></i></a>
+                        </div>
 
-        <!--<div class="row">-->
-            <!--<div id="quoteid2"  class="col-md-8 offset-md-2">-->
+                    </div>
 
-                <!--<div class="quote">-->
+            </div>
 
-                    <!--“I feel that life is divided into the horrible and the miserable. That's the two categories.-->
-                    <!--The horrible are like, I don't know, terminal cases, you know, and blind people, crippled.-->
-                    <!--I don't know how they get through life. It's amazing to me. And the miserable is everyone else.-->
-                    <!--So you should be thankful that you're miserable, because that's very lucky, to be miserable.”-->
-
-                    <!--<br>-->
-
-                    <!--<div class="citation">-->
-                        <!-- - -->
-                        <!--<span class="author">Woody Allen</span>,-->
-                        <!--<span class="source">Annie Hall</span>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-
-                <!--<br>-->
-                <!--<hr>-->
-
-                <!--<div class="menu">-->
-
-                    <!--<div class="tags">-->
-                        <!--<span class="tag">#woodyallen</span>-->
-                        <!--<span class="tag">#anniehall</span>-->
-                        <!--<span class="tag">#life</span>-->
-                        <!--<span class="tag">#film</span>-->
-                        <!--<span class="tag">#classic</span>-->
-                    <!--</div>-->
-
-                    <!--<div class="options">-->
-                        <!--<a id="quoteid2-copy" href="#!" class="option copy"><i class="fa fa-clipboard"></i></a>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-
-            <!--</div>-->
-        <!--</div>-->
-
-        <!--<br>-->
-        <!--<br>-->
-
-        <!--<div class="row">-->
-            <!--<div id="quoteid3"  class="col-md-8 offset-md-2">-->
-
-                <!--<div class="quote">-->
-
-                    <!--“I'm the Doctor.”-->
-
-                    <!--<br>-->
-
-                    <!--<div class="citation">-->
-                        <!-- - -->
-                        <!--<span class="author">Basically every doctor ever</span>,-->
-                        <!--<span class="source">Doctor Who</span>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-
-                <!--<br>-->
-                <!--<hr>-->
-
-                <!--<div class="menu">-->
-
-                    <!--<div class="tags">-->
-                        <!--<span class="tag">#doctorwho</span>-->
-                        <!--<span class="tag">#life</span>-->
-                        <!--<span class="tag">#tvshow</span>-->
-                    <!--</div>-->
-
-                    <!--<div class="options">-->
-                        <!--<a id="quoteid3-copy" href="#!" class="option copy"><i class="fa fa-clipboard"></i></a>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-
-            <!--</div>-->
-        <!--</div>-->
-
-        <!--<br>-->
-        <!--<br>-->
-
+            </div>
+            <br>
+            <br>
+        {% endfor %}
     </div>
 
 
