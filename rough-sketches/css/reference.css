@@ -1,0 +1,55 @@
+.latest {
+    margin-top: 5% !important;
+    padding: 20px !important;
+    border-radius: 5px !important;
+}
+
+.latest > .quote {
+    font-size: 22px !important;
+    text-align: center !important;
+    overflow: auto !important;
+    padding: 12px !important;
+}
+
+.latest > .quote:hover {
+    background-color: #CCCAC5 !important;
+    border-radius: 5px !important;
+}
+
+.citation {
+    float: right !important;
+}
+
+.tags {
+    float: left !important;
+}
+
+.options {
+    float: right !important;
+}
+
+.tag {
+    font-size: 16px !important;
+    border-radius: 25px !important;
+    background-color: #CCCAC5 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 2px !important;
+    padding-bottom: 3px !important;
+}
+
+.option {
+    color: #7F7055 !important;
+}
+
+.option:hover {
+    color: #584a37 !important;
+}
+
+.option:active {
+    color: #403324 !important;
+}
+
+.source {
+    font-style: italic !important;
+}

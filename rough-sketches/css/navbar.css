@@ -1,0 +1,13 @@
+nav {
+    border-bottom: 1px solid #7F7055 !important;
+}
+
+.navbar-brand {
+    font-family: 'Arvo', serif !important;
+    font-size: 24px !important;
+    color: black !important;
+}
+
+.nav-link {
+    color: #444444 !important;
+}
