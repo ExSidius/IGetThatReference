@@ -26,7 +26,7 @@ SECRET_KEY = 'nb7kbr5y=30x&i)j-l7y*z1s@ikm)_ovf+q)_%6m-(j*6y$7u&'
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['https://igtr.herokuapp.com/']
+ALLOWED_HOSTS = ['igtr.herokuapp.com']
 
 
 # Application definition
