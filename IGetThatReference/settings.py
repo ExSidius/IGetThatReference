@@ -26,6 +26,7 @@ SECRET_KEY = 'nb7kbr5y=30x&i)j-l7y*z1s@ikm)_ovf+q)_%6m-(j*6y$7u&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'references',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,11 @@ WSGI_APPLICATION = 'IGetThatReference.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
+# import dj_database_url
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
 
 DATABASES = {
     'default': {
@@ -117,4 +124,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# MEDIA_ROOT = BASE_DIR
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# MEDIA_URL= '/media/'
 STATIC_URL = '/static/'
