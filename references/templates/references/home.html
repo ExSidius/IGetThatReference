@@ -16,7 +16,6 @@
 
 {% block content %}
 
-    <div class="container">
 
         {% for reference, tags in info %}
 
@@ -51,7 +50,7 @@
 
                             {% for tag in tags %}
                                 <a id="tag-{{ reference.id }}-{{ tag }}" class="tag" href="#!">#{{ tag }}</a>
-                                <form id="form-{{ reference.id }}" method="get" action="https://www.google.com" target="_blank">
+                                <form id="form-{{ reference.id }}-{{ tag }}" method="get" action="{% url 'references:search' %}" target="_blank">
                                     <input type="hidden" name="param" value="tag">
                                     <input type="hidden" name="tag" value="{{ tag }}">
                                 </form>
@@ -70,6 +69,5 @@
             <br>
             <br>
         {% endfor %}
-    </div>
 
 {% endblock %}

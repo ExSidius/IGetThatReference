@@ -22,5 +22,5 @@ import references.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', references.views.home, name='home'),
-    # path('references/', include('references.urls')),
+    path('references/', include('references.urls')),
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

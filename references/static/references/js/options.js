@@ -16,8 +16,7 @@ $(document).ready(function() {
 
     $('.tag').click(function() {
 
-        let separator = '-';
-        let id = '#' + 'form' + separator + $(this).attr('id').split(separator)[1];
+        let id = '#' + 'form' + $(this).attr('id').slice(3);
         $(id).submit();
 
     });
