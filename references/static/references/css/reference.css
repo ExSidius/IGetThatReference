@@ -1,3 +1,7 @@
+form {
+    display: inline !important;
+}
+
 .latest {
     margin-top: 5% !important;
     padding: 20px !important;
@@ -40,6 +44,18 @@
     padding-right: 10px !important;
     padding-top: 2px !important;
     padding-bottom: 3px !important;
+    text-decoration: none !important;
+    color: #444444 !important;
+}
+
+.tag:hover {
+    text-decoration: none !important;
+    background-color: #b1afaa !important;
+}
+
+.tag:active {
+    text-decoration: none !important;
+    background-color: #a2a09b !important;
 }
 
 .option {

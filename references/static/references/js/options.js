@@ -13,4 +13,12 @@ $(document).ready(function() {
         document.body.removeChild(temp);
 
     });
+
+    $('.tag').click(function() {
+
+        let separator = '-';
+        let id = '#' + 'form' + separator + $(this).attr('id').split(separator)[1];
+        $(id).submit();
+
+    });
 });

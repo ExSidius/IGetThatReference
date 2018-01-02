@@ -25,8 +25,8 @@ SECRET_KEY = 'nb7kbr5y=30x&i)j-l7y*z1s@ikm)_ovf+q)_%6m-(j*6y$7u&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['igtr.herokuapp.com']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['igtr.herokuapp.com']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'IGetThatReference.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,17 +75,17 @@ WSGI_APPLICATION = 'IGetThatReference.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.config()
-}
-
+# import dj_database_url
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
+#     'default': dj_database_url.config()
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation

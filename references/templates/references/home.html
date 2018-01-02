@@ -1,45 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
 
-    {% load static %}
+{% load static %}
 
-    <meta charset="UTF-8">
-    <title>IGTR!</title>
+{% block title %}
+    IGTR!
+{% endblock %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'references/css/default.css' %}">
-    <link rel="stylesheet" href="{% static 'references/css/navbar.css' %}">
+{% block css %}
     <link rel="stylesheet" href="{% static 'references/css/reference.css' %}">
+{% endblock %}
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+{% block scripts %}
     <script src="{% static 'references/js/options.js' %}"></script>
+{% endblock %}
 
-</head>
-<body>
-
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">I Get That Reference!</a>
-            <!--<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#my_navbar">-->
-                <!--<span class="navbar-toggler-icon">☰</span>-->
-            <!--</button>-->
-            <!--<div class="navbar-collapse collapse" id="my_navbar">-->
-                <!--<ul class="navbar-nav ml-auto">-->
-                    <!--<li class="nav-item">-->
-                        <!--<a class="nav-link" href="#">Latest</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        </div>
-    </nav>
-
+{% block content %}
 
     <div class="container">
 
@@ -75,7 +50,11 @@
                         <div class="tags">
 
                             {% for tag in tags %}
-                                <span class="tag">#{{ tag }}</span>
+                                <a id="tag-{{ reference.id }}-{{ tag }}" class="tag" href="#!">#{{ tag }}</a>
+                                <form id="form-{{ reference.id }}" method="get" action="https://www.google.com" target="_blank">
+                                    <input type="hidden" name="param" value="tag">
+                                    <input type="hidden" name="tag" value="{{ tag }}">
+                                </form>
                             {% endfor %}
                         </div>
 
@@ -93,7 +72,4 @@
         {% endfor %}
     </div>
 
-
-
-</body>
-</html>
+{% endblock %}
