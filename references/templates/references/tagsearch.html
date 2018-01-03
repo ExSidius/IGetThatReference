@@ -24,9 +24,9 @@
                 <div class="col-md-8 offset-md-2">
                     <h4 id="desc">
                         {% if type == 'tag' %}
-                        Posts with the tag "{{ input }}"
+                        Posts with the tag "{{ input }}".
                         {% else %}
-                        Search results for "{{ input }}"
+                        Search results for "{{ input }}".
                         {% endif %}
                     </h4>
                 </div>
@@ -63,12 +63,13 @@
                         <div class="tags">
 
                             {% for tag in tags %}
-                                <a id="tag-{{ reference.id }}-{{ tag }}" class="tag" href="{% url 'references:tag' tag%}">#{{ tag }}</a>
+                                <a id="tag-{{ reference.id }}-{{ tag }}" class="tag" href="{% url 'references:tag' tag%}" target="_blank">#{{ tag }}</a>
                             {% endfor %}
                         </div>
 
                         <div class="options">
-                            <a id="copy-{{ reference.id }}" href="#!" class="option copy"><i class="fa fa-clipboard"></i></a>
+                            <a id="unique-{{ reference.id }}" href="{% url 'references:unique' reference.id%}" class="option unique" target="_blank"><i class="fa fa-info" aria-hidden="true"></i></a>
+                            <a id="copy-{{ reference.id }}" href="#!" class="option copy"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
                         </div>
 
                     </div>

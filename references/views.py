@@ -63,3 +63,12 @@ def search(request):
         }
 
         return render(request, 'references/tagsearch.html', context)
+
+def unique(request, id):
+
+    references = [Reference.objects.get(pk=id)]
+    tags = [list(map(str.strip, reference.tags.split(','))) for reference in references]
+
+    context = {'info': zip(references, tags)}
+
+    return render(request, 'references/home.html', context)

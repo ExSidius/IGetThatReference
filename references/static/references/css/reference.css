@@ -58,15 +58,17 @@ form {
     background-color: #a2a09b !important;
 }
 
-.option {
+.option, .unique {
     color: #7F7055 !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
 }
 
-.option:hover {
+.option:hover, .unique:hover {
     color: #584a37 !important;
 }
 
-.option:active {
+.option:active, .unique:active {
     color: #403324 !important;
 }
 
