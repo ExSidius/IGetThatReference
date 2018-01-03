@@ -73,3 +73,7 @@ form {
 .source {
     font-style: italic !important;
 }
+
+#desc {
+    font-style: italic !important;
+}

@@ -16,16 +16,30 @@
 
 {% block content %}
 
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h4 id="desc">
+                        {% if type == 'tag' %}
+                        Posts with the tag "{{ input }}"
+                        {% else %}
+                        Search results for "{{ input }}"
+                        {% endif %}
+                    </h4>
+                </div>
+            </div>
+
+            <br>
+            <br>
 
         {% for reference, tags in info %}
 
             <div class="row">
 
-            {% if forloop.counter0 == 0 %}
-                <div id="quote-{{ reference.id }}" class="col-md-8 offset-md-2 latest">
-            {% else %}
                 <div id="quote-{{ reference.id }}"  class="col-md-8 offset-md-2">
-            {% endif %}
 
                     <div class="quote">
 
