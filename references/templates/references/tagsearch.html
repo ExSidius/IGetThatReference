@@ -63,11 +63,7 @@
                         <div class="tags">
 
                             {% for tag in tags %}
-                                <a id="tag-{{ reference.id }}-{{ tag }}" class="tag" href="#!">#{{ tag }}</a>
-                                <form id="form-{{ reference.id }}-{{ tag }}" method="get" action="{% url 'references:tag' tag%}" target="_blank">
-                                    {% csrf_token %}
-                                    <input type="hidden">
-                                </form>
+                                <a id="tag-{{ reference.id }}-{{ tag }}" class="tag" href="{% url 'references:tag' tag%}">#{{ tag }}</a>
                             {% endfor %}
                         </div>
 
