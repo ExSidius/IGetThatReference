@@ -17,10 +17,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework.urlpatterns import format_suffix_patterns
 import references.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', references.views.home, name='home'),
     path('references/', include('references.urls')),
+    path('api/', references.views.ReferenceList.as_view())
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns = format_suffix_patterns(urlpatterns)

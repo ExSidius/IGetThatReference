@@ -1,8 +1,16 @@
-from django.shortcuts import render, redirect
-from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView
-from .models import Reference
+from django.shortcuts import render, redirect, get_object_or_404
+from rest_framework.views import APIView
+
+from rest_framework.response import Response
+from rest_framework import status
+
+# from django.views import View
+# from django.views.generic import TemplateView, ListView, DetailView
 # from django.http import HttpResponse
+
+from .models import Reference
+from .serializer import ReferenceSerializer
+
 
 # Create your views here.
 def home(request):
@@ -72,3 +80,15 @@ def unique(request, id):
     context = {'info': zip(references, tags)}
 
     return render(request, 'references/home.html', context)
+
+
+# Lists all stocks and get new one
+class ReferenceList(APIView):
+    def get(self, request):
+        references = Reference.objects.all()
+        serialize = ReferenceSerializer(references, many=True)
+
+        return Response(serialize.data)
+
+    def post(self, request):
+        pass
