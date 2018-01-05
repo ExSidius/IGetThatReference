@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from rest_framework.views import APIView
 
 from rest_framework.response import Response
-# from rest_framework import status
+from rest_framework import status
 
 # from django.views import View
 # from django.views.generic import TemplateView, ListView, DetailView
@@ -86,9 +86,16 @@ def unique(request, id):
 class ReferenceList(APIView):
     def get(self, request):
         references = Reference.objects.all()
-        serialize = ReferenceSerializer(references, many=True)
+        serializer = ReferenceSerializer(references, many=True)
 
-        return Response(serialize.data)
+        return Response(serializer.data)
 
     def post(self, request):
-        pass
+        serializer =  ReferenceSerializer(data=request.data)
+        print(request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
